@@ -27,6 +27,7 @@ dump_smaps(int pid) {
         perror("read:");
     }
     close(fd);
+    return 0;
 }
 
         

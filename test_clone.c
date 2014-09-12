@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define _GNU_SOURCE
+#define __USE_GNU
 #include <sched.h>
 #include <time.h>
 #include <sys/mman.h>

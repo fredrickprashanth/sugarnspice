@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/time.h>
 #include <sys/types.h>
 #include <sys/select.h>
+#include <unistd.h>
 
 int main()
 {
@@ -47,7 +49,7 @@ int main()
 
 	__sync_fetch_and_add(&ad, 1);
 	printf("ad=%d\n""sdfsdf\n",ad);
-	printf("ran=%d",random());
+	printf("ran=%ld",random());
 
 	struct timeval tv;
 	tv.tv_sec = 10;

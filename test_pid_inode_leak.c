@@ -5,13 +5,17 @@
 #include <sys/param.h>
 #include <sys/stat.h>
 #include <sys/poll.h>
+#include <sys/mount.h>
 #include <signal.h>
-#include <sched.h>
 
 #define __GNU_SOURCE
+#define __USE_GNU
+#include <sched.h>
+
 #ifndef CLONE_NEWPID
 #  define CLONE_NEWPID            0x20000000
 #endif
+
 int child(void *arg)
 {
 	pid_t pid;

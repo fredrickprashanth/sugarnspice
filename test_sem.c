@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/mman.h>
+#include <sys/mount.h>
+#include <sys/types.h>
+#include <unistd.h>
 
 #include "psem.h" 
 #include "xsem.h"
@@ -57,7 +60,7 @@ main(int argc, char *argv[]) {
 	
 	int nr_threads, arg_pos = 0 ;
 	int sem_count;
-	int i, ret;
+	int i;
 	pthread_t *ths;
 	SEM_T *ps;
 	
@@ -104,7 +107,7 @@ main(int argc, char *argv[]) {
 #else
 		if (fork() == 0) {
 			sem_test_thread(ps);
-			return;
+			return 0;
 		}
 #endif
 	}
