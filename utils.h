@@ -16,14 +16,14 @@ void _sig_term_handler(int);
 
 #ifdef NDEBUG
 
-#define debug_printf(format, ...) {}
-#define debug_print_error(...) {}
-#define time_it() {}
+#define debug_printf(format, ...)
+#define debug_print_error(...)
+static void time_it() { }
 
 #else /* !NDEBUG */
 
 #define debug_printf(...) printf("debug:"__VA_ARGS__)
-void time_it();
+#define time_it do_time_it
 				
 #endif /* NDEBUG */
 

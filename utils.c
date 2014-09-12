@@ -1,10 +1,10 @@
 #include <time.h>
 #include <stdio.h>
 #include <unistd.h>
-
 #include "utils.h"
+
 void 
-time_it()
+do_time_it()
 {
 	static int flag_in = 0;
 	static struct timespec ts[2];

@@ -1,6 +1,6 @@
 
 CC := gcc
-MY_CFLAGS := -Wall -g
+MY_CFLAGS := -Wall -g -DNDEBUG
 MY_DEPS := -lpthread -lrt -g
 
 %.o: %.c
@@ -18,6 +18,7 @@ my-progs += test_c_misc.bin test_c_misc2.bin cpukhz.bin fs.bin test_mem_alerts.b
 my-progs += gnu_tsearch.bin my_strstr.bin producer_test.bin test_mask.bin test_select.bin
 my-progs += run_cpu_affine.bin test_cache_alignment.bin test_bitfield.bin test_ncpus.bin
 my-progs += test_sem.bin test_setcap.bin test_types.bin test_alignment.bin
+my-progs += test_bitarray.bin test_bsearch.bin test_sparse_array.bin test_simple_pipe.bin
 
 
 
