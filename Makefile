@@ -20,6 +20,7 @@ my-progs += run_cpu_affine.bin test_cache_alignment.bin test_bitfield.bin test_n
 my-progs += test_sem.bin test_setcap.bin test_types.bin test_alignment.bin
 my-progs += test_bitarray.bin test_bsearch.bin test_sparse_array.bin test_simple_pipe.bin
 my-progs += test_large_mult.bin
+my-progs += gen_init_cpio.c
 
 
 
@@ -46,6 +47,8 @@ test_tasklock.bin: MY_DEPS += -lpthread
 test_pthread_waitpid.bin: MY_DEPS += -lpthread
 
 test_setcap.bin: MY_DEPS += -lcap
+
+gen_init_cpio.bin: MY_DEPS += -lpthread
 
 
 test_sem.bin: xsem.o
